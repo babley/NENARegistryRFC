@@ -274,7 +274,7 @@
             Information Needed to Create a New Value
           </name>
           <t>
-            Specification Required.
+            Expert Review.
           </t>
         </section>
         <section>
@@ -285,7 +285,7 @@
             This registry contains:
           </t>
           <ul>
-            <li>The UTF-8 "Name" of the agency</li>
+            <li>The UTF-8 "Name" of the agency type</li>
             <li>The UTF-8 "Description" of the agency type</li>
             <li>A "Reference" with a URI either to the document requested the registry entry or contact contact information for the individual who contributed the value.</li>
           </ul>
@@ -313,25 +313,24 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 short "Name" of the agency, usually an abbreviation (e.g., "FBI")</li>
+            <li>The UTF-8 "Full Name" of the agency (e.g., "Federal Bureau of Investigation")</li>
+            <li>A "Reference" with a URI either to the document requested the registry entry or contact contact information for the individual who contributed the value.</li>
           </ul>
         </section>
       </section>
 
       <section>
-        <name>"urn:emergency:service:responder.fire" Registry</name>
+        <name>"urn:emergency:service:responder.fire" Subregistry</name>
         <t>
-          This document creates a registry for SAMPLE
+          This registry has similar purposes as the "responder.police" subregistry, except for types of fire response agencies (for example, "forest" or "private").
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Expert Review.
           </t>
         </section>
         <section>
@@ -342,25 +341,24 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" of the agency type</li>
+            <li>The UTF-8 "Description" of the agency type</li>
+            <li>A "Reference" with a URI either to the document that requested the registry entry.</li>
           </ul>
         </section>
       </section>
 
       <section>
-        <name>"urn:emergency:service:responder.ems" Registry</name>
+        <name>"urn:emergency:service:responder.ems" Subregistry</name>
         <t>
-          This document creates a registry for SAMPLE
+          This registry has similar purposes as the "responder.police" subregistry, except for types of Emergency Medical Service response agencies (for example, "Local" or "countyParish").
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Expert Review
           </t>
         </section>
         <section>
@@ -371,10 +369,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" of the agency type</li>
+            <li>The UTF-8 "Description" of the agency type</li>
+            <li>A "Reference" with a URI either to the document requested the registry entry or contact contact information for the individual who contributed the value.</li>
           </ul>
         </section>
       </section>
