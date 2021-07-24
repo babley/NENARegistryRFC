@@ -1,2 +1,2 @@
 # NENARegistryRFC
-Working file for developing an omnibus RFC to move and update registries from NENA Registry System to IANA in according with NENA-STA-010.3 and NENA-STA-021. 
+Working file for developing an omnibus RFC to move and update registries from NENA Registry System to IANA registries in accordance with NENA-STA-010.3 and NENA-STA-021, as well as other potential standards documents and proposals unique to this document. 
