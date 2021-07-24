@@ -20,6 +20,7 @@
     <!-- add 'role="editor"' below for the editors if appropriate -->
     <!-- Another author who claims to be an editor -->
     <author fullname="Brian Rosen" initials="B.R." surname="Rosen">
+      <organization>Unaffiliated</organization>
       <address>
         <postal>
           <street />
@@ -155,7 +156,7 @@
             Information Needed to Create a New Value
           </name>
           <t>
-            Document required
+            Specification required
           </t>
         </section>
         <section>
@@ -189,7 +190,7 @@
             Information Needed to Create a New Value
           </name>
           <t>
-            Document required
+            Specification required.
           </t>
         </section>
         <section>
@@ -371,7 +372,7 @@
           <ul>
             <li>The UTF-8 "Name" of the agency type</li>
             <li>The UTF-8 "Description" of the agency type</li>
-            <li>A "Reference" with a URI either to the document requested the registry entry or contact contact information for the individual who contributed the value.</li>
+            <li>A "Reference" with a URI either to the document that requested the registry entry or contact contact information for the individual who contributed the value.</li>
           </ul>
         </section>
       </section>
@@ -379,14 +380,14 @@
       <section>
         <name>"urn:emergency:uid" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          Various entities need to create globally unique identifiers. A simple way to do that is to combine a locally unique identifier and a domain name (which is globally unique). However, many entities need to create more than one type of globally unique identifier and knowing what type of identifier is helpful in diagnosing problems. For this purpose, the uid URN subregistry creates unique strings used to prepend identifiers that indicate the type of identifier it is.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -394,13 +395,12 @@
             Content
           </name>
           <t>
-            This registry contains:
+          This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" of the identifier prefix</li>
+            <li>The UTF-8 "Purpose" of the identifier prefix</li>
+            <li>A "Reference" with a URI to the document that requested the registry entry.</li>
           </ul>
         </section>
       </section>
@@ -408,14 +408,14 @@
       <section>
         <name>"serviceNames" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          The NENA i3 standard includes various services which provide interfaces to access information or to engage in interactions in NG9-1-1, which are queried either using SIP or HTTP. These services are discoverable through the ESInet that has deployed an instance of these services according to the URI scheme of registries and subregistries created by the i3 standard and by this document. In order to faciliate interoperability there is need to codify their names in a registry. This document requests that IANA creates this registy. Other standards documents may create additional services, which will then be added to this registry.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -426,10 +426,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The short "Service Name" of the service (e.g., "ADR")</li>
+            <li>The long "Service" name of the service (e.g., "Additional Data Repository")</li>
+            <li>A "Reference" with a URI to the document that requested the registry entry.</li>
           </ul>
         </section>
       </section>
@@ -437,14 +436,14 @@
       <section>
         <name>"serviceState" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          The serviceState event returns an enumerated value of the current state of a service as defined in <xref target="NENAi3" format="default">the NENA i3 Standard</xref>.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -455,10 +454,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The short "Name" of the service state (e.g., "Normal" or "Scheduled Maintenance Down")</li>
+            <li>The long "Description" of the service state (e.g., "The service is operating normally. Calls can be sent to this destination normally.")</li>
+            <li>A "Reference" with a URI to the document that requested the registry entry.</li>
           </ul>
         </section>
       </section>
@@ -466,14 +464,14 @@
       <section>
         <name>"elementState" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          The elementState event returns an enumerated value of the current state of an element or agency as defined in <xref target="NENAi3" format="default">the NENA i3 Standard</xref>. 
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -484,18 +482,17 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The short "Name" of the element state (e.g., "Normal" or "Scheduled Maintenance Down")</li>
+            <li>The long "Description" of the element state (e.g., "The service is operating normally. Calls can be sent to this destination normally.")</li>
+            <li>A "Reference" with a URI to the document that requested the registry entry.</li>
           </ul>
         </section>
       </section>
 
       <section>
-        <name>"urn:emergency:service:serviceAgencyLocator" Registry</name>
+        <name>"urn:emergency:service:serviceAgencyLocator" Subregistry</name>
         <t>
-          This document creates a registry for SAMPLE
+          The ESInet will connect to many services and public safety agencies. A directory (“white pages” and “yellow pages”) of agencies, together with key information about the service or agency, is the function of the Service/Agency Locator. The Service/Agency Locator is a distributed database. There are several mechanisms by which the Service/Agency Locator can be searched to locate a specific service or agency. One primary way to search the Service/Agency Locator is by name. The Service/Agency Locator provides a name (white page) search function, with wild cards, to find a specific service or agency. The search by name is more useful for agencies than services. The name that is searched comes from the “org” field of the Agency jCard that is returned in the Service/Agency Locator Record. Another method to search is by location and agency type.
         </t>
         <section>
           <name>
@@ -510,13 +507,12 @@
             Content
           </name>
           <t>
-            This registry contains:
+            This subregistry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The "Name" of the service (e.g."ADR")</li>
+            <li>The long "Service" name of the service (e.g., "Additional Data Repository")</li>
+            <li>A "Reference" with a URI to the document that requested the registry entry.</li>
           </ul>
         </section>
       </section>
