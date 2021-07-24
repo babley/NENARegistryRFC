@@ -436,7 +436,7 @@
       <section>
         <name>"serviceState" Registry</name>
         <t>
-          The serviceState event returns an enumerated value of the current state of a service as defined in <xref target="NENAi3" format="default">the NENA i3 Standard</xref>.
+          The serviceState event returns an enumerated value of the current state of a service as defined in .
         </t>
         <section>
           <name>
@@ -499,7 +499,7 @@
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -510,8 +510,8 @@
             This subregistry contains:
           </t>
           <ul>
-            <li>The "Name" of the service (e.g."ADR")</li>
-            <li>The long "Service" name of the service (e.g., "Additional Data Repository")</li>
+            <li>The "Service Identifier" of the service (e.g."ESRP")</li>
+            <li>The long "Service" name of the service (e.g., "Emergency Services Routing Proxy")</li>
             <li>A "Reference" with a URI to the document that requested the registry entry.</li>
           </ul>
         </section>
@@ -520,14 +520,22 @@
       <section>
         <name>"SIPHeaderIsOperatorConditions" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          <xref target="NENAi3" format="default">the NENA i3 Standard</xref> contains a test called "SIPHeaderCondition" which tests a SIP header field in the INVITE or MESSAGE of a call (such as “From”, “To”, “Contact”, etc.). SIPHeaderCondition has an "operator" member has three potential values:
+        </t>
+        <ul>
+          <li>"EQ" for an equality match</li>
+          <li>"SS" for a substring match</li>
+          <li>"IS" for a registry-defined match</li>
+        </ul>
+        <t>
+          It is the third of these potential values that requires that a registry be created. IANA is requested to create this registry.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification Required
           </t>
         </section>
         <section>
@@ -538,10 +546,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>A short UTF-8 "Name" </li>
+            <li>The long UTF-8 "Description" </li>
+            <li>A "Reference" with a URI to the document that requested the registry entry.</li>
           </ul>
         </section>
       </section>
@@ -549,14 +556,14 @@
       <section>
         <name>"urn:emergency:media-feature" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          <xref target="NENAi3" format="default">the NENA i3 Standard</xref> has numerous provisions for support of a "media-feature" tag to indicate in the SIP INVITE that the session will involve TTY interworking and/or PSAP Call Control. IANA is requested to create a registry that enumerates the allowable values for this field.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification Required.
           </t>
         </section>
         <section>
@@ -567,10 +574,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>A short UTF-8 "Tag" </li>
+            <li>A long UTF-8 "Purpose" </li>
+            <li>A "Reference" with a URI to the document that requested the registry entry.</li>
           </ul>
         </section>
       </section>
@@ -578,14 +584,14 @@
       <section>
         <name>"queueState" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          In the <xref target="NENAi3" format="default">the NENA i3 Standard</xref> and other NG9-1-1 standards literature, a PSAP is a service with defined interfaces, provisioning and functions. One of its interfaces is that which communicates the current state of a call queue. IANA is requested to create a registry to enumerate the values allow for comminicating a PSAP call queue's state.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -596,10 +602,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>A short UTF-8 "Name" </li>
+            <li>The long UTF-8 "Description" </li>
+            <li>A "Reference" with a URI to the document that requested the registry entry.</li>
           </ul>
         </section>
       </section>
@@ -607,14 +612,14 @@
       <section>
         <name>"securityPosture" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          <xref target="NENAi3" format="default">the NENA i3 Standard</xref> allows for various elements, services and other entities to communicate their current security status, ranging on a color scale from Green to Red. This allows downstram and upstream entities to evaluate the current security conditions of a given entity, such as other parts of the system or a Security Operations Center. IANA is requested to create a registry to enumerate these values.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification Required
           </t>
         </section>
         <section>
@@ -625,10 +630,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>A short UTF-8 "Value" </li>
+            <li>The long UTF-8 "Purpose" </li>
+            <li>A "Reference" with a URI to the document that requested the registry entry.</li>
           </ul>
         </section>
       </section>
@@ -636,14 +640,14 @@
       <section>
         <name>"ESRP Notify Event Code" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          CAP messages are used for events sent to, and within an ESInet. CAP messages have an event code tag. For use of the “EsrpNotifyEventCode”, CAP event code definitions are needed so that the recipient of the message knows why it received the message. A registry is needed for event codes defined by <xref target="NENAi3" format="default">the NENA i3 Standard</xref> in Section 5.2.1.6.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -654,10 +658,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>A short UTF-8 "Name" </li>
+            <li>The long UTF-8 "Description" </li>
+            <li>A "Reference" with a URI to the document that requested the registry entry.</li>
           </ul>
         </section>
       </section>
@@ -1163,7 +1166,7 @@
     </section>
     <section anchor="Security" numbered="true" toc="default">
       <name>Security Considerations</name>
-      <t>This document only defines registries, not how they are used.  As such there are no security considerations.</t>
+      <t>This document only defines registries populated by other documents, not how they are used. As such there are no special security considerations introduced by this document, outside of those considerations specific to a given registry (e.g., the "securityPosture" registry), although those considerations are introduced by the source document and not this one.</t>
     </section>
   </middle>
   <!--  *****BACK MATTER ***** -->
