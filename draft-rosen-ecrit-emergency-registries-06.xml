@@ -668,14 +668,14 @@
       <section>
         <name>"Route Cause" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
-        </t>
+          The ESRP routes calls using its Policy Routing Function. The result of evaluating a rule set is a Route action that routes the call towards a PSAP (or responder). The Route action includes a Cause value, which is placed in a Reason header associated with a History-Info header that informs the recipient why it got the call. A registry is provided for the values in the cause. The Route action cause is an enumeration, but the Reason header has a numeric cause value and a text string.<xref target="NENAi3" /> IANA is requested to create a registry to enumerate allowable Route Cause values.
+      </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -686,10 +686,10 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The "Code" value (a 3-digit integer)</li>
+            <li>The UTF-8 "Text" description (explanatory text, a string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -752,14 +752,14 @@
       <section>
         <name>"logEvent callTypes" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          In NG9-1-1, the type of Call is loged with the StartCall/EndCall LogEvent (e.g., "emergency" or "legacyWireless"). These call types are enumerated in the “LogEvent CallTypes” Registry. IANA is requested to create this registry.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -770,10 +770,10 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" (e.g., "emergency") (a short string)</li>
+            <li>The UTF-8 "Description" (e.g., "Call is deemed urgent call and treated as such") (explanatory text, a string)</li>
+            <li>The UTF-8 "Classification" (e.g., "Primary") (a string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -781,14 +781,14 @@
       <section>
         <name>"Call States" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          In NG9-1-1, the state of the call is logged when it changes (e.g., "callBegin" or "callAnswered"). Each change in state is associated with a log event for that change in state. Many of these log events correlate with transactions in SIP. IANA is requested to create a registry for changes of call states.<xref target="NENAi3" /> 
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -799,10 +799,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" (a short string)</li>
+            <li>The UTF-8 "Purpose" (explanatory text, a string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -810,14 +809,14 @@
       <section>
         <name>"logEvent Announcement Types" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          NG9-1-1 supports announcements using an Interactive Media Response System (in the media negotiated by the caller) and potentially accepts responses via DTMF, KeyPress Markup Language, or other interaction styles.<xref target="NENAi3" /> <xref target="RFC4240" /> <xref target="RFC4730" /> This service is inteded to allow an NG9-1-1 system to answer the call with an auto-attendant or similar mechanism when appropriate. IANA is requested to create a registry to enumerate the allowed values for Announcement Types. 
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -828,10 +827,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" (a short string)</li>
+            <li>The UTF-8 "Purpose" (explanatory text, a string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -839,14 +837,14 @@
       <section>
         <name>"non-RTP Media Types" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          <xref target="NENAi3" /> requires that most media must be communicated via RTP. However, there is need to mark non-RTP media (which in NG9-1-1 is normally an Instant Message as part of a Non-Interactive Call), which is expected to be MSRP. IANA is requested to create a registry for this marking.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -857,10 +855,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" (a short string)</li>
+            <li>The UTF-8 "Description" (explanatory text, a string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -1033,14 +1030,14 @@
       <section>
         <name>"Policy Type" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          In NG9-1-1, policies are used to configure NG9-1-1 elements and services based on configurable conditions and actions; for example, Route Policies can be used to configure emergency call routing to behave in specific ways under different conditions (such as to change routing when under duress or when the call contains a specific kind of media). Policies are stored into and retrieved from a Policy Store using a web service. The “Policy Store Web Service” facilitates agencies uploading and retrieving policies.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -1051,10 +1048,10 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Type" of the policy (a short string) (e.g., ""ESRPNotify")</li>
+            <li>The UTF-8 "Format" of the policy (e.g., "XACML")</li>
+            <li>The UTF-8 "Use" of the policy (e.g., "Access rights for Spatial Interface")</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -1062,14 +1059,14 @@
       <section>
         <name>"Discrepancy Report Status Token" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          Errors and discrepancies may occur in any set of data, including databases, configurations, etc. The functional elements described in <xref target="NENAi3" /> MUST support the discrepancy report (DR) function. The DR function allows any entity to notify agencies and services (including the BCF, ESRP, ECRF, Policy Store, and LVF) when any discrepancy is found (for example, "LocationReferenceNotResolved" or "MalformedURI"). These discrepancies may reflect normal errors in HTTP or SIP, but may also reflect errors specific the NG9-1-1. The discrepancy report function is intended to be generated by any entity that is using the data and finds a problem. DRs are not intended to be an alarm function requiring immediate response. IANA is requested to create a registry enumerating the available and allowable DRs.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification Required
           </t>
         </section>
         <section>
@@ -1080,10 +1077,10 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Token" of the DR (a short string) (e.g., "LocationReferenceNotResolved")</li>
+            <li>The UTF-8 "Name" of the type of DR (e.g., "Problem" or "Query")</li>
+            <li>The UTF-8 "Discrepancy Reports" of included discrepancy report(s) included (e.g., "LoSTDiscrepancyResponse, BCFDiscrepancyReport, LoggingDiscrepancyResponse, SIPDiscrepancyResponse, PermissionsDiscrepancyResponse"</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -1091,14 +1088,14 @@
       <section>
         <name>"Event Package" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
-        </t>
+          In NG9-1-1, events are communicated within and between ESInets using the SIP SUBSCRIBE/NOTIFY mechanism described in <xref target="RFC6665" />. In addition to using standard event packages, <xref target="NENAi3" /> defines a number of new event packages specific to NG9-1-1 needs. IANA is requested to create a registry to enumerate these event packages.
+      </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Documentation required.
           </t>
         </section>
         <section>
@@ -1109,10 +1106,8 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -1210,8 +1205,11 @@
       <references>
         <name>Informative References</name>
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.3261.xml"?>
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.4240.xml"?>
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.4730.xml"?>
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.5226.xml"?>
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.6443.xml"?>
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.6665.xml"?>
         <reference anchor="StatusCodes" target ="https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml">
           <front>
             <title>Hypertext Transfer Protocol (HTTP) Status Code Registry</title>
