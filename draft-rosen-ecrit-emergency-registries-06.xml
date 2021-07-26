@@ -15,7 +15,7 @@
   <front>
     <!-- The abbreviated title is used in the page header - it is only necessary if the 
         full title is longer than 39 characters -->
-    <title abbrev="Emergency Registries">Emergency Registries Here</title>
+    <title abbrev="Emergency Registries">Emergency Registries</title>
     <seriesInfo name="Internet-Draft" value="draft-rosen-ecrit-emergency-registries" />
     <!-- add 'role="editor"' below for the editors if appropriate -->
     <!-- Another author who claims to be an editor -->
@@ -868,14 +868,14 @@
       <section>
         <name>"Agency Roles" Registry</name>
         <t>
-          In NG9-1-1, every Agency is classified by a specified Agency Role (e.g., "Dispatch). IANA is requested to create this registry.
+          In NG9-1-1, every Agency is classified by a specified Agency Role (e.g., "Dispatch). These Agency Roles are validated and secured with non-repudiation in a certificate traceable to the PSAP Credentialing Agency (PCA) (see <xref target="NENAi3" format="default">The NENA i3 Standard</xref>). IANA is requested to create this registry.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            Expert review, or (optionally) Specification required (a specification MAY request an Agency Role).
+            Specification Required.
           </t>
         </section>
         <section>
@@ -896,14 +896,14 @@
       <section>
         <name>"Agent Roles" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          Agents authenticate to the ESInet in one or more Roles (e.g., "Dispatching", "Calltaking"). These Agent Roles are validated and secured with non-repudiation in a certificate traceable to the PCA (see <xref target="NENAi3" format="default">The NENA i3 Standard</xref>). IANA is requested to create this registry.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -914,10 +914,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Role" (a short string)</li>
+            <li>The UTF-8 "Description" (explanatory text, a string)</li>
+            <li>A "Reference" (URI) with either contact information for the entity that or a URI to the document that requests the entry.</li>
           </ul>
         </section>
       </section>
@@ -925,14 +924,14 @@
       <section>
         <name>"Status Codes" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          <xref target="NENAi3" /> uses normal HTTP status codes wherever possible (<xref target="RFC7231" /> and <xref target="StatusCodes" />. However, there are requirements to register custom status codes specific to NG9-1-1 operations that are not adequately covered by the standard ones; this is particularly the case with HTTP errors (4xx). IANA is requested to create this registry.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required. The specification requesting a new value SHOULD be a revision to <xref target="NENAi3" />.
           </t>
         </section>
         <section>
@@ -943,10 +942,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Status Code" (a short string)</li>
+            <li>The UTF-8 "Description" (explanatory text, a string)</li>
+            <li>A "Reference" (URI) to the document that requests the entry.</li>
           </ul>
         </section>
       </section>
@@ -954,14 +952,14 @@
       <section>
         <name>"Interface Names" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          NG9-1-1 includes numerous interfaces for which there are data rights management policies associated with them. These access rights policies are based on XACML <xref target="NENAi3" />. IANA is requested to create a registry which will be populated with values enumerating the authoritative name for each of these interfacaes.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -972,10 +970,8 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -983,14 +979,14 @@
       <section>
         <name>"Match Type" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          In NG9-1-1, the &lt;matchType&gt; element is intended to contain an indication of the type of data used by the Location Validation Function (LVF)’s geocoding logic when attempting to match the location supplied in the request to the GIS data that has been provisioned. The value of the element is an xsd:token, and must be a registered value. It is RECOMMENDED that Emergency Call Routing Functions (ECRFs) and LVFs implement match type. If more than one token would apply, then “Hybrid” is used. A registry for &lt;matchType&gt; tokens is defined in <xref target="NENAi3" />. IANA is requested to create this registry.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -1001,10 +997,8 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Token" (a short string) (e.g., "Road Centerline" or "Hybrid").</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -1012,14 +1006,14 @@
       <section>
         <name>"GIS Layers" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          In NG9-1-1, a GIS system has GIS features in many GIS data layers (such as discipline-specific service regions, road centerlines, address points, etc. A query to the GIS system through the Mapping Data Service (MDS) may return GIS features from one or more data layers, or from all of its data layers<xref target="NENAi3" /> <xref target="GIS" /> . A registry is required to enumerate data layers that may be included in a query in NG9-1-1. IANA is requested to create this registry. 
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification required.
           </t>
         </section>
         <section>
@@ -1030,10 +1024,8 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -1133,14 +1125,14 @@
           This document creates a registry for "LoggingServiceMediaErrorReasonCodes".
         </t>
         <t>
-          If an error is encountered in logging media, a log event with an error code is logged. The error codes are defined in this registry.
+          In NG9-1-1, everything is logged, including media associated with any Log Event. If an error is encountered in logging media, a Log Event with an error code is logged. IANA is requested to create this registry with initial values defined in this document. This registry was originally created in a previous version of <xref target="NENAi3" /> (see <xref target="i3v2" />).
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES a new name and description of the condition that is to be defined. New values must have clear differentiation from current values.
+            Expert review. An entry to this registry REQUIRES a new name and description of the condition that is to be defined. New values must have clear differentiation from current values.
           </t>
         </section>
         <section>
@@ -1151,11 +1143,37 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" (a short string)</li>
+            <li>The UTF-8 "Description" (explanatory text, a string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
+        </section>
+        <section>
+          <name>
+            Initial Values for LoggingServiceMediaErrorReasonCodes
+          </name>
+          <table anchor="table_ex">
+            <name>Initial Values</name>
+            <thead>
+              <tr>
+                <th align='center'>Name</th>
+                <th align='center'>Description</th>
+                <th align='center'>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="center">lostConnection</td>
+                <td align="center">The connection to the SRS was lost and could not be re-established</td>
+                <td align="center">This document</td>
+              </tr>
+              <tr>
+                <td align="center">dropOuts</td>
+                <td align="center">There were significant number of missing media packets</td>
+                <td align="center">This document</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </section>
 
@@ -1179,9 +1197,9 @@
       <references>
         <name>Normative References</name>
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml"?>
-        <reference anchor="NENAi3" target ="https://dev.nena.org/higherlogic/ws/public/download/21124/STA-010.3%20i3%20Standard%20PubRev2%2020201112.pdf">
+        <reference anchor="NENAi3" target ="https://www.nena.org/page/i3_Stage3">
           <front>
-            <title>NENA i3 Standard for Next-Generation 9-1-1, Version 3</title>
+            <title>NENA i3 Standard for Next-Generation 9-1-1, Version 3 ("i3 Version 3")</title>
             <author>
               <organization abbrev="NENA">NENA: the 9-1-1 Association</organization>
             </author>
@@ -1194,6 +1212,36 @@
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.3261.xml"?>
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.5226.xml"?>
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.6443.xml"?>
+        <reference anchor="StatusCodes" target ="https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml">
+          <front>
+            <title>Hypertext Transfer Protocol (HTTP) Status Code Registry</title>
+            <author>
+              <organization abbrev="IANA">Internet Assigned Numbers Authority</organization>
+            </author>
+            <date month="September" year="2018"/>
+          </front>
+        </reference>
+        <reference anchor="i3v2" target ="https://cdn.ymaws.com/www.nena.org/resource/resmgr/standards-archived/nena-sta-010.2_i3_architectu.pdf">
+          <front>
+            <title>
+              NENA Detailed Functional and Interface Standards for the NENA i3 Solution ("i3 Version 2").
+            </title>
+            <author>
+              <organization abbrev="NENA">NENA: the 9-1-1 Association</organization>
+            </author>
+            <date month="August" year="2016"/>
+          </front>
+        </reference>
+        <reference anchor="GIS" target ="https://www.nena.org/page/NG911GISDataModel">
+          <front>
+            <title>NENA Standard for Next-Generation 9-1-1 GIS Data Model</title>
+            <author>
+              <organization abbrev="NENA">NENA: the 9-1-1 Association</organization>
+            </author>
+            <date month="February" year="2020"/>
+          </front>
+        </reference>
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.7231.xml"?>
       </references>
     </references>
     <section anchor="app-additional" numbered="true" toc="default">
