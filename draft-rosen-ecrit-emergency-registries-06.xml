@@ -697,14 +697,14 @@
       <section>
         <name>"logEvent" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
-        </t>
+          Every interaction and event in NG9-1-1 core services under the <xref target="NENAi3" format="default">the NENA i3 Standard</xref> standard is logged using a standardized Logger. The "logEvent" registry enumerates the types of log records that can be logged. IANA is requested to create this registry. 
+      </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification Required
           </t>
         </section>
         <section>
@@ -715,10 +715,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" (a short string)</li>
+            <li>The UTF-8 "Purpose" (explanatory text, a string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -726,14 +725,14 @@
       <section>
         <name>"logEvent CallSignalingMessageProtocol" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          In the CallSignalingMessage log event, the protocol of the message must be logged. This registry provides a registry for the protocol used for the logging event. IANA is requested to create this registry.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Specification Required.
           </t>
         </section>
         <section>
@@ -744,10 +743,8 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Name" of the protocol used (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
@@ -871,14 +868,14 @@
       <section>
         <name>"Agency Roles" Registry</name>
         <t>
-          This document creates a registry for SAMPLE
+          In NG9-1-1, every Agency is classified by a specified Agency Role (e.g., "Dispatch). IANA is requested to create this registry.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            An entry to this registry REQUIRES
+            Expert review, or (optionally) Specification required (a specification MAY request an Agency Role).
           </t>
         </section>
         <section>
@@ -889,10 +886,9 @@
             This registry contains:
           </t>
           <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>The UTF-8 "Role" (a short string)</li>
+            <li>The UTF-8 "Description" (explanatory text, a string)</li>
+            <li>A "Reference" (URI) with either contact information for the entity that or a URI to the document that requests the entry.</li>
           </ul>
         </section>
       </section>
