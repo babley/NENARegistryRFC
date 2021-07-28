@@ -97,7 +97,7 @@
     </section>
     <section anchor="Acknowledgements" numbered="true" toc="default">
       <name>Acknowledgements</name>
-      <t>Thanks to the workgroups and committees at NENA: The 9-1-1 Association, especially the Core Services Committee, as well as ETSI and EENA for their contributions to unify international emergency calling standards.</t>
+      <t>Thanks to the workgroups and committees at NENA: The 9-1-1 Association, especially the Core Services Agency Systems Committees, as well as ETSI and EENA for their contributions to unify international emergency calling standards.</t>
     </section>
     <!-- Possibly a 'Contributors' section ... -->
     <section anchor="IANA" numbered="true" toc="default">
@@ -110,12 +110,18 @@
         <t>
           IANA is requested to etablish the registries within this section under the "Emergency" area. These registries contain enumerated values used for emergency calling.  Unless otherwise specified, these registries operate under "Expert Review" rules per <xref target="RFC5226" format="default">RFC 5226</xref>. The expert should also determine that the entity requesting a new value follows any special rules enumerated for each registry within the following subsections, such as whether a registry requires new entries come from a request from a reputable SDO through a consensus standard.
         </t>
+        <t>
+          These registries are required to implement <xref target="NENAi3" format="default">the NENA i3 Standard for Next-Generation 9-1-1</xref> as well as the <xref target="EIDO" format="default">NENA Standard for Emergency Incident Data Object</xref>. These standards, unless otherwise specified, populate the registries created by this document. Some registries previously existed in <xref target="NRS" format="default">the NENA Registry System</xref>, but the intent of international SDOs is to maintain next-generation emergency calling registries under IANA in the future. <xref target="NRS" /> will be maintained only for backwards compatibility, and for registries required only for North America
+        </t>
+        <t>
+          In this document, "NG9-1-1" is use to describe next-generation emergency calling services generally and is meant to include NG112 initiaves ongoing in Europe (<xref target="NG112" />).
+        </t>
       </section>
 
       <section>
         <name>"urn:emergency" namespace</name>
         <t>
-          This document creates a registry for the "urn:emergency" namespace. urn:emergency is the top-level entry for a series of sub-registries used for routing of calls and queries within an ESInet.
+          This document creates a registry for the "urn:emergency" namespace. urn:emergency is the top-level entry for a series of sub-registries used for routing of calls and queries within an ESInet. The intial values for the "emergency" namespace are as indicated in <xref target="NENAi3" />.
         </t>
         <section>
           <name>
@@ -138,273 +144,284 @@
             <li>A "Reference" (URI) to the standard that defines the label</li>
           </ul>
         </section>
+        <section>
+          <name>Subregistries</name>
+          <t>
+            Following are several subregistries under "urn:emergency".
+          </t>
+          
+        <section>
+          <name>"urn:emergency:service" URN Subregistry</name>
+          <t>
+            This document creates a subregistry for "urn:emergency:service" under urn:emergecy.
+          </t>
+          <t>
+            When calls are routed within an ESInet, the routing element (PSAP or ESRP) queries the ECRF for the (nominal) route. It does so with a service URN. Esternal routing is accomplished with "urn:service:sos", as defined by RFC 5031. Within an ESInet, values under this registry are used.
+          </t>
+          <t>
+            Service URNs as defined here begin with “urn:emergency:service”. The sub-namespace defined by this registry MAY be further subdivided (potentially several times), by sub-registries under this sub-registry. A new entry starting with “urn:emergency:service” SHOULD denote a new type of route, which MUST be distinguished by the PSAP or ESRP from other uses. For example, 9-1-1 calls being routed within the ESInet use “urn:emergency:service:sos” (or a subspace of it). Calls routed by a PSAP to a responder use “urn:emergency:service:responder” (the type of responder is also included, e.g.,  “urn:emergency:service:responder.police”). A PSAP or ESRP specifies the URN in a LoST query, and the ECRF uses it to choose a (nominal) route. In this entry in the “urn:emergency” registry, “service” means a path towards a service, as it does for “urn:service” as defined by RFC 5031.
+          </t>
+          <section>
+            <name>
+              Information Needed to Create a New Value
+            </name>
+            <t>
+              Specification required
+            </t>
+          </section>
+          <section>
+            <name>
+              Content
+            </name>
+            <t>
+              This registry contains:
+            </t>
+            <ul>
+              <li>The UTF-8 "Name" of the "top level" label (a short string)</li>
+              <li>The UTF-8 "Purpose" of the label (explanatory text)</li>
+              <li>A "Reference" (URI) to the document that defines the label</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <name>"urn:emergency:service:sos" Registry</name>
+          <t>
+            This document creates a subregistry for "urn:emergency:service:sos".
+          </t>
+          <t>
+            Routing of emergency calls within the ESInet is a primary function of prevailing standards for NG9-1-1, including <xref target="NENAi3" format="default">The NENA i3 Standard</xref>. When ESRPs must route calls within the ESInet, they query the ECRF for the route. Routing for emergency calls may involve multiple levels of ESRPs. Each level may need a different URN to be distinguishable (it is also possible for the ECRF to distinguish by the identity of the ESRP that queries it). Routing of emergency calls, including instant messages and non-interactive calls, is accomplished with a URN beginning with “urn:emergency:service:sos”.
+          </t>
+          <t>
+            The “urn:emergency:service:sos” registry contains label values appropriate for the various levels of routing within the ESInet.
+          </t>
+          <section>
+            <name>
+              Information Needed to Create a New Value
+            </name>
+            <t>
+              Specification required.
+            </t>
+          </section>
+          <section>
+            <name>
+              Content
+            </name>
+            <t>
+              This registry contains:
+            </t>
+            <ul>
+              <li>The UTF-8 "Name" of the "top level" label (a short string)</li>
+              <li>The UTF-8 "Purpose" of the label (explanatory text)</li>
+              <li>A "Reference" (URI) to the document that defines the label</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <name>"urn:emergency:service:test" Registry</name>
+          <t>
+            This document creates a subregistry for "urn:emergency:service:test".
+          </t>
+          <t>
+            Test calls are directed to “urn:service:test.sos”. To route such test calls where the routing infrastructure uses multiple levels of routing, and thus uses URNs in the “urn:emergency:service:sos” registry, service URNs are needed for test calls with similar levels. IANA is requested to create an entry in the “urn:emergency:service” registry with the name “test” and with the purpose noted as “routing test calls within the ESInet toward a primary PSAP”. The reference will be to the registry created by this section, “urn:emergency:service:test”. The separator between the “test” label and the service (“urn:emergency:service:test” registry name) is a period “.”. The “urn:emergency:service:test” registry contains label values corresponding to the levels in the “urn:emergency:service:sos” registry. These registries are normally kept in sync, an entry added to “urn:emergency:service:sos” should also add a corresponding entry to urn:emergency:service:test.
+          </t>
+          <section>
+            <name>
+              Information Needed to Create a New Value
+            </name>
+            <t>
+              Expert Review
+            </t>
+          </section>
+          <section>
+            <name>
+              Content
+            </name>
+            <t>
+              The content of this registry should mirror the content of urn:service:test:sos except with the "test" label as described above.
+            </t>
+          </section>
+        </section>
+
+        <section>
+          <name>"urn:emergency:service:responder" Registry</name>
+          <t>
+            Once a PSAP gets a call, they may have to transfer the call to a secondary PSAP. The secondary PSAP is chosen based on the type of responder, and the location of the caller. Routing of emergency calls from a PSAP towards a responder is accomplished with a URN beginning with “urn:emergency:service:responder”. IANA is requested to create an entry in the “urn:emergency:service” registry with the name “responder” and with the purpose noted as “routing emergency calls within the ESInet towards a responder”. The reference will be to the registry created by this section, “urn:emergency:service:responder”.
+          </t>
+          <t>
+            The “urn:emergency:service:responder” registry contains label values appropriate for the types of responders within the ESInet. The separator between the “responder” label and the type of responder (“urn:emergency:service:responder” registry name) is a period “.”. This registry is also used in other contexts where an agency type is useful. For those purposes, a 'psap' entry is provided. “urn:emergency:service:agencyType.psap” must not be used to route emergency calls. It is not equivalent to, or a substitute for “urn:service:sos”.
+          </t>
+          <section>
+            <name>
+              Information Needed to Create a New Value
+            </name>
+            <t>
+              Expert Review.
+            </t>
+          </section>
+          <section>
+            <name>
+              Content
+            </name>
+            <t>
+              This registry contains:
+            </t>
+            <ul>
+              <li>The UTF-8 "Name" of the "top level" label (a short string)</li>
+              <li>The UTF-8 "Purpose" of the label (explanatory text)</li>
+              <li>A "Reference" (URI) to a document that defines the label</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <name>"urn:emergency:service:responder.police" Subregistry</name>
+          <t>
+            There are many different kinds of law enforcement agencies that have distinct differences in jurisdiction and formation (for example,  police department organized under a municipal government as opposed to the sheriff's office organized under an elected sheriff). This subregistry dilineates different types of police agenices uder the urn:emergency:service:responder registry.
+          </t>
+          <section>
+            <name>
+              Information Needed to Create a New Value
+            </name>
+            <t>
+              Expert Review.
+            </t>
+          </section>
+          <section>
+            <name>
+              Content
+            </name>
+            <t>
+              This registry contains:
+            </t>
+            <ul>
+              <li>The UTF-8 "Name" of the agency type</li>
+              <li>The UTF-8 "Description" of the agency type</li>
+              <li>A "Reference" with a URI either to the document requested the registry entry or contact contact information for the individual who contributed the value.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <name>"police.federal" Subregistry</name>
+          <t>
+            There are several federal police agencies. This registry is a subregistry of “urn:emergency:service:responder.police.” and lists each police agency operating at the federal/national level in North America. The “federal.police” registry contains label values appropriate for the types of national police responders within the ESInet. This is distinct from the parent subregistry, "police.federal", is the police.federal subregistry includes the names for specific federal agencies, as opposed to the "responder.police" subregistry which indicated the agency TYPE (police). The separator between the “police.federal” label and the type of responder (“urn:emergency:service:responder.police.federal” registry name) is a period “.”.
+          </t>
+          <section>
+            <name>
+              Information Needed to Create a New Value
+            </name>
+            <t>
+              Expert Review.
+            </t>
+          </section>
+          <section>
+            <name>
+              Content
+            </name>
+            <t>
+              This registry contains:
+            </t>
+            <ul>
+              <li>The UTF-8 short "Name" of the agency, usually an abbreviation (e.g., "FBI")</li>
+              <li>The UTF-8 "Full Name" of the agency (e.g., "Federal Bureau of Investigation")</li>
+              <li>A "Reference" with a URI either to the document requested the registry entry or contact contact information for the individual who contributed the value.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <name>"urn:emergency:service:responder.fire" Subregistry</name>
+          <t>
+            This registry has similar purposes as the "responder.police" subregistry, except for types of fire response agencies (for example, "forest" or "private").
+          </t>
+          <section>
+            <name>
+              Information Needed to Create a New Value
+            </name>
+            <t>
+              Expert Review.
+            </t>
+          </section>
+          <section>
+            <name>
+              Content
+            </name>
+            <t>
+              This registry contains:
+            </t>
+            <ul>
+              <li>The UTF-8 "Name" of the agency type</li>
+              <li>The UTF-8 "Description" of the agency type</li>
+              <li>A "Reference" with a URI either to the document that requested the registry entry.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <name>"urn:emergency:service:responder.ems" Subregistry</name>
+          <t>
+            This registry has similar purposes as the "responder.police" subregistry, except for types of Emergency Medical Service response agencies (for example, "Local" or "countyParish").
+          </t>
+          <section>
+            <name>
+              Information Needed to Create a New Value
+            </name>
+            <t>
+              Expert Review
+            </t>
+          </section>
+          <section>
+            <name>
+              Content
+            </name>
+            <t>
+              This registry contains:
+            </t>
+            <ul>
+              <li>The UTF-8 "Name" of the agency type</li>
+              <li>The UTF-8 "Description" of the agency type</li>
+              <li>A "Reference" with a URI either to the document that requested the registry entry or contact contact information for the individual who contributed the value.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <name>"urn:emergency:uid" Registry</name>
+          <t>
+            Various entities need to create globally unique identifiers. A simple way to do that is to combine a locally unique identifier and a domain name (which is globally unique). However, many entities need to create more than one type of globally unique identifier and knowing what type of identifier is helpful in diagnosing problems. For this purpose, the uid URN subregistry creates unique strings used to prepend identifiers that indicate the type of identifier it is.
+          </t>
+          <section>
+            <name>
+              Information Needed to Create a New Value
+            </name>
+            <t>
+              Specification required.
+            </t>
+          </section>
+          <section>
+            <name>
+              Content
+            </name>
+            <t>
+              This registry contains:
+            </t>
+            <ul>
+              <li>The UTF-8 "Name" of the identifier prefix</li>
+              <li>The UTF-8 "Purpose" of the identifier prefix</li>
+              <li>A "Reference" with a URI to the document that requested the registry entry.</li>
+            </ul>
+          </section>
+        </section>
       </section>
+    </section>
 
       <section>
-        <name>"urn:emergency:service" URN Subregistry</name>
+        <name>i3 Registries</name>
         <t>
-          This document creates a subregistry for "urn:emergency:service" under urn:emergecy.
+          Following are additional registries needed to implement <xref target="NENAi3" />
         </t>
-        <t>
-          When calls are routed within an ESInet, the routing element (PSAP or ESRP) queries the ECRF for the (nominal) route. It does so with a service URN. Esternal routing is accomplished with "urn:service:sos", as defined by RFC 5031. Within an ESInet, values under this registry are used.
-        </t>
-        <t>
-          Service URNs as defined here begin with “urn:emergency:service”. The sub-namespace defined by this registry MAY be further subdivided (potentially several times), by sub-registries under this sub-registry. A new entry starting with “urn:emergency:service” SHOULD denote a new type of route, which MUST be distinguished by the PSAP or ESRP from other uses. For example, 9-1-1 calls being routed within the ESInet use “urn:emergency:service:sos” (or a subspace of it). Calls routed by a PSAP to a responder use “urn:emergency:service:responder” (the type of responder is also included, e.g.,  “urn:emergency:service:responder.police”). A PSAP or ESRP specifies the URN in a LoST query, and the ECRF uses it to choose a (nominal) route. In this entry in the “urn:emergency” registry, “service” means a path towards a service, as it does for “urn:service” as defined by RFC 5031.
-        </t>
-        <section>
-          <name>
-            Information Needed to Create a New Value
-          </name>
-          <t>
-            Specification required
-          </t>
-        </section>
-        <section>
-          <name>
-            Content
-          </name>
-          <t>
-            This registry contains:
-          </t>
-          <ul>
-            <li>The UTF-8 "Name" of the "top level" label (a short string)</li>
-            <li>The UTF-8 "Purpose" of the label (explanatory text)</li>
-            <li>A "Reference" (URI) to the document that defines the label</li>
-          </ul>
-        </section>
-      </section>
-
-      <section>
-        <name>"urn:emergency:service:sos" Registry</name>
-        <t>
-          This document creates a subregistry for "urn:emergency:service:sos".
-        </t>
-        <t>
-          Routing of emergency calls within the ESInet is a primary function of prevailing standards for NG9-1-1, including <xref target="NENAi3" format="default">The NENA i3 Standard</xref>. When ESRPs must route calls within the ESInet, they query the ECRF for the route. Routing for emergency calls may involve multiple levels of ESRPs. Each level may need a different URN to be distinguishable (it is also possible for the ECRF to distinguish by the identity of the ESRP that queries it). Routing of emergency calls, including instant messages and non-interactive calls, is accomplished with a URN beginning with “urn:emergency:service:sos”.
-        </t>
-        <t>
-          The “urn:emergency:service:sos” registry contains label values appropriate for the various levels of routing within the ESInet.
-        </t>
-        <section>
-          <name>
-            Information Needed to Create a New Value
-          </name>
-          <t>
-            Specification required.
-          </t>
-        </section>
-        <section>
-          <name>
-            Content
-          </name>
-          <t>
-            This registry contains:
-          </t>
-          <ul>
-            <li>The UTF-8 "Name" of the "top level" label (a short string)</li>
-            <li>The UTF-8 "Purpose" of the label (explanatory text)</li>
-            <li>A "Reference" (URI) to the document that defines the label</li>
-          </ul>
-        </section>
-      </section>
-
-      <section>
-        <name>"urn:emergency:service:test" Registry</name>
-        <t>
-          This document creates a subregistry for "urn:emergency:service:test".
-        </t>
-        <t>
-          Test calls are directed to “urn:service:test.sos”. To route such test calls where the routing infrastructure uses multiple levels of routing, and thus uses URNs in the “urn:emergency:service:sos” registry, service URNs are needed for test calls with similar levels. IANA is requested to create an entry in the “urn:emergency:service” registry with the name “test” and with the purpose noted as “routing test calls within the ESInet toward a primary PSAP”. The reference will be to the registry created by this section, “urn:emergency:service:test”. The separator between the “test” label and the service (“urn:emergency:service:test” registry name) is a period “.”. The “urn:emergency:service:test” registry contains label values corresponding to the levels in the “urn:emergency:service:sos” registry. These registries are normally kept in sync, an entry added to “urn:emergency:service:sos” should also add a corresponding entry to urn:emergency:service:test.
-        </t>
-        <section>
-          <name>
-            Information Needed to Create a New Value
-          </name>
-          <t>
-            Expert Review
-          </t>
-        </section>
-        <section>
-          <name>
-            Content
-          </name>
-          <t>
-            The content of this registry should mirror the content of urn:service:test:sos except with the "test" label as described above.
-          </t>
-        </section>
-      </section>
-
-      <section>
-        <name>"urn:emergency:service:responder" Registry</name>
-        <t>
-          Once a PSAP gets a call, they may have to transfer the call to a secondary PSAP. The secondary PSAP is chosen based on the type of responder, and the location of the caller. Routing of emergency calls from a PSAP towards a responder is accomplished with a URN beginning with “urn:emergency:service:responder”. IANA is requested to create an entry in the “urn:emergency:service” registry with the name “responder” and with the purpose noted as “routing emergency calls within the ESInet towards a responder”. The reference will be to the registry created by this section, “urn:emergency:service:responder”.
-        </t>
-        <t>
-          The “urn:emergency:service:responder” registry contains label values appropriate for the types of responders within the ESInet. The separator between the “responder” label and the type of responder (“urn:emergency:service:responder” registry name) is a period “.”. This registry is also used in other contexts where an agency type is useful. For those purposes, a 'psap' entry is provided. “urn:emergency:service:agencyType.psap” must not be used to route emergency calls. It is not equivalent to, or a substitute for “urn:service:sos”.
-        </t>
-        <section>
-          <name>
-            Information Needed to Create a New Value
-          </name>
-          <t>
-            Expert Review.
-          </t>
-        </section>
-        <section>
-          <name>
-            Content
-          </name>
-          <t>
-            This registry contains:
-          </t>
-          <ul>
-            <li>The UTF-8 "Name" of the "top level" label (a short string)</li>
-            <li>The UTF-8 "Purpose" of the label (explanatory text)</li>
-            <li>A "Reference" (URI) to a document that defines the label</li>
-          </ul>
-        </section>
-      </section>
-
-      <section>
-        <name>"urn:emergency:service:responder.police" Subregistry</name>
-        <t>
-          There are many different kinds of law enforcement agencies that have distinct differences in jurisdiction and formation (for example,  police department organized under a municipal government as opposed to the sheriff's office organized under an elected sheriff). This subregistry dilineates different types of police agenices uder the urn:emergency:service:responder registry.
-        </t>
-        <section>
-          <name>
-            Information Needed to Create a New Value
-          </name>
-          <t>
-            Expert Review.
-          </t>
-        </section>
-        <section>
-          <name>
-            Content
-          </name>
-          <t>
-            This registry contains:
-          </t>
-          <ul>
-            <li>The UTF-8 "Name" of the agency type</li>
-            <li>The UTF-8 "Description" of the agency type</li>
-            <li>A "Reference" with a URI either to the document requested the registry entry or contact contact information for the individual who contributed the value.</li>
-          </ul>
-        </section>
-      </section>
-
-      <section>
-        <name>"police.federal" Subregistry</name>
-        <t>
-          There are several federal police agencies. This registry is a subregistry of “urn:emergency:service:responder.police.” and lists each police agency operating at the federal/national level in North America. The “federal.police” registry contains label values appropriate for the types of national police responders within the ESInet. This is distinct from the parent subregistry, "police.federal", is the police.federal subregistry includes the names for specific federal agencies, as opposed to the "responder.police" subregistry which indicated the agency TYPE (police). The separator between the “police.federal” label and the type of responder (“urn:emergency:service:responder.police.federal” registry name) is a period “.”.
-        </t>
-        <section>
-          <name>
-            Information Needed to Create a New Value
-          </name>
-          <t>
-            Expert Review.
-          </t>
-        </section>
-        <section>
-          <name>
-            Content
-          </name>
-          <t>
-            This registry contains:
-          </t>
-          <ul>
-            <li>The UTF-8 short "Name" of the agency, usually an abbreviation (e.g., "FBI")</li>
-            <li>The UTF-8 "Full Name" of the agency (e.g., "Federal Bureau of Investigation")</li>
-            <li>A "Reference" with a URI either to the document requested the registry entry or contact contact information for the individual who contributed the value.</li>
-          </ul>
-        </section>
-      </section>
-
-      <section>
-        <name>"urn:emergency:service:responder.fire" Subregistry</name>
-        <t>
-          This registry has similar purposes as the "responder.police" subregistry, except for types of fire response agencies (for example, "forest" or "private").
-        </t>
-        <section>
-          <name>
-            Information Needed to Create a New Value
-          </name>
-          <t>
-            Expert Review.
-          </t>
-        </section>
-        <section>
-          <name>
-            Content
-          </name>
-          <t>
-            This registry contains:
-          </t>
-          <ul>
-            <li>The UTF-8 "Name" of the agency type</li>
-            <li>The UTF-8 "Description" of the agency type</li>
-            <li>A "Reference" with a URI either to the document that requested the registry entry.</li>
-          </ul>
-        </section>
-      </section>
-
-      <section>
-        <name>"urn:emergency:service:responder.ems" Subregistry</name>
-        <t>
-          This registry has similar purposes as the "responder.police" subregistry, except for types of Emergency Medical Service response agencies (for example, "Local" or "countyParish").
-        </t>
-        <section>
-          <name>
-            Information Needed to Create a New Value
-          </name>
-          <t>
-            Expert Review
-          </t>
-        </section>
-        <section>
-          <name>
-            Content
-          </name>
-          <t>
-            This registry contains:
-          </t>
-          <ul>
-            <li>The UTF-8 "Name" of the agency type</li>
-            <li>The UTF-8 "Description" of the agency type</li>
-            <li>A "Reference" with a URI either to the document that requested the registry entry or contact contact information for the individual who contributed the value.</li>
-          </ul>
-        </section>
-      </section>
-
-      <section>
-        <name>"urn:emergency:uid" Registry</name>
-        <t>
-          Various entities need to create globally unique identifiers. A simple way to do that is to combine a locally unique identifier and a domain name (which is globally unique). However, many entities need to create more than one type of globally unique identifier and knowing what type of identifier is helpful in diagnosing problems. For this purpose, the uid URN subregistry creates unique strings used to prepend identifiers that indicate the type of identifier it is.
-        </t>
-        <section>
-          <name>
-            Information Needed to Create a New Value
-          </name>
-          <t>
-            Specification required.
-          </t>
-        </section>
-        <section>
-          <name>
-            Content
-          </name>
-          <t>
-          This registry contains:
-          </t>
-          <ul>
-            <li>The UTF-8 "Name" of the identifier prefix</li>
-            <li>The UTF-8 "Purpose" of the identifier prefix</li>
-            <li>A "Reference" with a URI to the document that requested the registry entry.</li>
-          </ul>
-        </section>
-      </section>
-
       <section>
         <name>"serviceNames" Registry</name>
         <t>
@@ -1171,7 +1188,14 @@
           </table>
         </section>
       </section>
+      </section>
 
+    </section>
+    <section>
+      <name>EIDO Registries</name>
+      <t>
+        Following are registries needed to implement <xref target="EIDO" />.
+      </t>
     </section>
     <section anchor="Security" numbered="true" toc="default">
       <name>Security Considerations</name>
@@ -1192,6 +1216,15 @@
       <references>
         <name>Normative References</name>
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml"?>
+        <reference anchor="EIDO" target ="https://dev.nena.org/higherlogic/ws/public/download/23026/NENA-STA-021.1%20EIDO%20JSON%20PubRvw.pdf">
+          <front>
+            <title>NENA Standard for Emergency Incident Data Object (Public Review Draft)</title>
+            <author>
+              <organization abbrev="NENA">NENA: the 9-1-1 Association</organization>
+            </author>
+            <date month="May" year="2021"/>
+          </front>
+        </reference>
         <reference anchor="NENAi3" target ="https://www.nena.org/page/i3_Stage3">
           <front>
             <title>NENA i3 Standard for Next-Generation 9-1-1, Version 3 ("i3 Version 3")</title>
@@ -1210,6 +1243,18 @@
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.5226.xml"?>
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.6443.xml"?>
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.6665.xml"?>
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.7231.xml"?>
+        <reference anchor="NG112" target ="https://eena.org/eena-ng112-project/">
+          <front>
+            <title>
+              EENA NG112 Project
+            </title>
+            <author>
+              <organization abbrev="EENA">European Emergency Number Association</organization>
+            </author>
+            <date month="May" year="2020"/>
+          </front>
+        </reference>
         <reference anchor="StatusCodes" target ="https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml">
           <front>
             <title>Hypertext Transfer Protocol (HTTP) Status Code Registry</title>
@@ -1239,7 +1284,18 @@
             <date month="February" year="2020"/>
           </front>
         </reference>
-        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.7231.xml"?>
+        <reference anchor="NRS" target ="https://www.nena.org/page/nena_registry_system">
+          <front>
+            <title>
+              NENA Registry System
+            </title>
+            <author>
+              <organization abbrev="NENA">NENA: the 9-1-1 Association</organization>
+            </author>
+
+          </front>
+        </reference>
+        
       </references>
     </references>
     <section anchor="app-additional" numbered="true" toc="default">
