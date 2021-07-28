@@ -1196,6 +1196,32 @@
       <t>
         Following are registries needed to implement <xref target="EIDO" />.
       </t>
+      <section>
+        <name>"Incident Type-Common" Registry</name>
+        <t>
+          Incident type code that is available in the EIDO-IncidentType-Common” registry and that most closely corresponds to the Incident Type internal code. APCO has developed an ANS set of globally unique common Incident type codes (<xref target="APCO" />), which form the basis for this registry. Each Agency should maintain a mapping of its Internal Incident Types (IncidentTypeInternal) to the list of Common Incident Types (IncidentTypeCommon). The Common Incident Type should be selected from this mapping when the EIDO is created to identify the Incident type using a common code that is globally understood.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Documentation required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Name" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
     </section>
     <section anchor="Security" numbered="true" toc="default">
       <name>Security Considerations</name>
@@ -1223,6 +1249,17 @@
               <organization abbrev="NENA">NENA: the 9-1-1 Association</organization>
             </author>
             <date month="May" year="2021"/>
+          </front>
+        </reference>
+        <reference anchor="APCO" target ="https://www.apcointl.org/download/public-safety-communications-common-incident-types-for-data-exchange/?wpdmdl=6346">
+          <front>
+            <title>
+              APCO 2.103.2-2019 Public Safety Communications Common Incident Types for Data Exchange
+            </title>
+            <author>
+              <organization abbrev="APCO">Association of Public Safety Communications Officials International</organization>
+            </author>
+            <date year="2019"/>
           </front>
         </reference>
         <reference anchor="NENAi3" target ="https://www.nena.org/page/i3_Stage3">
