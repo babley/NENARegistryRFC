@@ -1197,6 +1197,33 @@
         Following are registries needed to implement <xref target="EIDO" />.
       </t>
       <section>
+        <name>"Agency Role" Registry</name>
+        <t>
+          The role of the agency in relation to the Incident (e.g., "Call Receiving", "Dispatching", "Dispatched"). IANA is requested to create a registry to enumerate these values.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
+      <section>
         <name>"Incident Type-Common" Registry</name>
         <t>
           Incident type code that most closely corresponds to the Incident Type internal code. APCO has developed an ANS set of globally unique common Incident type codes (<xref target="APCO" />), which forms the basis for this registry. Each Agency should maintain a mapping of its internal incident types to the list of Common Incident Types (IncidentTypeCommon). The Common Incident Type should be selected from this mapping when the EIDO is created to identify the Incident type using a common code that is globally understood. IANA is requested to create a registry to enumerate these values.
@@ -1217,36 +1244,8 @@
             This registry contains:
           </t>
           <ul>
-            <li>The UTF-8 "Name" (a short string)</li>
-            <li>A "Reference" (URI) to a document that requests the entry</li>
-          </ul>
-        </section>
-      </section>
-      <section>
-        <name>"Common Disposition Codes" Registry</name>
-        <t>
-          An agency assigns a disposition to an incident when its participation in the incident ends. The disposition code indicates whether follow-up reports are required and conveys other information about the incident, such as whether it resulted from a false or actual alarm. They are used to exchange the status and follow up requirements of an incident upon its closure. The disposition codes are drawn from a registry containing common disposition codes for Police, Fire EMS disciplines. These codes are defined by <xref target="APCO1.111" /> and implemented by <xref target ="EIDO" />. 
-        </t>
-        <t>
-          IANA is requested to create a registry enumerating these values. Because APCO ANS 1.111.2-2018 uses a two-digit integer as an incident status code, IANA is also requested to hold values 46-100 for future versions of the standard.
-        </t>
-        <section>
-          <name>
-            Information Needed to Create a New Value
-          </name>
-          <t>
-            Specification required.
-          </t>
-        </section>
-        <section>
-          <name>
-            Content
-          </name>
-          <t>
-            This registry contains:
-          </t>
-          <ul>
-            <li>The UTF-8 "Name" (a short string)</li>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
             <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
@@ -1272,12 +1271,233 @@
             This registry contains:
           </t>
           <ul>
-            <li>The UTF-8 "Name" (a short string)</li>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
             <li>A "Reference" (URI) to a document that requests the entry</li>
           </ul>
         </section>
       </section>
-      
+      <section>
+        <name>"Common Disposition Codes" Registry</name>
+        <t>
+          An agency assigns a disposition to an incident when its participation in the incident ends. The disposition code indicates whether follow-up reports are required and conveys other information about the incident, such as whether it resulted from a false or actual alarm. They are used to exchange the status and follow up requirements of an incident upon its closure. The disposition codes are drawn from a registry containing common disposition codes for Police, Fire EMS disciplines. These codes are defined by <xref target="APCO1.111" /> and implemented by <xref target ="EIDO" />.
+        </t>
+        <t>
+          IANA is requested to create a registry enumerating these values. Because APCO ANS 1.111.2-2018 uses a two-digit integer as an incident status code, IANA is also requested to hold values 46-100 for future versions of the standard.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Value" (integer)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <name>"Person Role" Registry</name>
+        <t>
+          Describes the relationship (Caller, Victim, suspect, etc.) of a person to the incident. Available person types are contained in the Person Role registry. Note that there could be multiple relationships as when the reporting party is also the victim. IANA is requested to create a registry to enumerate these values.
+
+        </t>
+        
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <name>"Vehicle Relationship Type" Registry</name>
+        <t>
+          Describes the relationship (victim’s vehicle, accident vehicle, suspect vehicle, etc.) of a vehicle to the incident. Available vehicle relationship types are contained in the “EIDO-VehicleRelationshipType” registry. IANA is requested to create a registry to enumerate these values.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <name>"Location Type" Registry</name>
+        <t>
+          Conveys the location type (Caller, Initial, CurrentIncident, Staging, Investigation, Tower Location, Other) of a location and its relationship to an ongoing incident. IANA is requested to create a registry to enumerate these values.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <name>"Primary Unit Status-Common" Registry</name>
+        <t>
+          A standard code for the current status of an emergency response units (e.g., whether a fire engine is "available" or "notAvailable"). IANA is requested to create a registry to enumerate these values.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <name>"Secondary Unit Status-Common" Registry</name>
+        <t>
+         Statuses that further qualifies the Primary Unit Status by providing more detail about the associated Primary status. IANA is requested to create a registry to enumerate these values.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <name>"Emergency Resource Type-Common" Registry</name>
+        <t>
+          A standard code for an emergency type (e.g., BombSquad, ParkRanger, TransitOfficer). IANA is requested to create a registry to enumerate these values.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <name>"Resource Attribute" Registry</name>
+        <t>
+          A standard code for an emergency resource attribute (skill and equipment; e.g., "EMSPhysician, "EMT", "SCBA". Also indicates an interpreter's translation abilities, such as "UkranianInterpreter") possessed by an emergency resource). IANA is requested to create a registry to enumerate these values.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
     </section>
     <section anchor="Security" numbered="true" toc="default">
       <name>Security Considerations</name>
