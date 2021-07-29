@@ -1251,6 +1251,33 @@
         </section>
       </section>
       <section>
+        <name>"EIDO-IncidentStatus-Common" Registry</name>
+        <t>
+        Incident status code that most closely corresponds to the Incident Status-Internal. Typically used to track significant changes in an Incident’s status. Each Agency should maintain a mapping of its internal Incident status (IncidentStatusInternal) to the list of common Incident status (IncidentStatusCommon). The common Incident status should be selected from this mapping when an EIDO is created to identify the Incident status using a common code that is globally understood. IANA is requested to create a registry to enumerate these values.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Value" (a short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
+      <section>
         <name>"EIDO-ReportNumberType" Registry</name>
         <t>
           Used to indicate the current status of the report number associated with an incident. If a report number is present in an EIDO, it is required to indicate the current status of the report number (.e.g, "New" or "Ongoing"). IANA is requested to create a registry to enumerate allowable values for this field.
