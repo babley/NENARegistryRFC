@@ -1199,14 +1199,14 @@
       <section>
         <name>"Incident Type-Common" Registry</name>
         <t>
-          Incident type code that is available in the EIDO-IncidentType-Common” registry and that most closely corresponds to the Incident Type internal code. APCO has developed an ANS set of globally unique common Incident type codes (<xref target="APCO" />), which form the basis for this registry. Each Agency should maintain a mapping of its Internal Incident Types (IncidentTypeInternal) to the list of Common Incident Types (IncidentTypeCommon). The Common Incident Type should be selected from this mapping when the EIDO is created to identify the Incident type using a common code that is globally understood.
+          Incident type code that most closely corresponds to the Incident Type internal code. APCO has developed an ANS set of globally unique common Incident type codes (<xref target="APCO" />), which forms the basis for this registry. Each Agency should maintain a mapping of its internal incident types to the list of Common Incident Types (IncidentTypeCommon). The Common Incident Type should be selected from this mapping when the EIDO is created to identify the Incident type using a common code that is globally understood. IANA is requested to create a registry to enumerate these values.
         </t>
         <section>
           <name>
             Information Needed to Create a New Value
           </name>
           <t>
-            Documentation required.
+            Specification required.
           </t>
         </section>
         <section>
@@ -1222,6 +1222,62 @@
           </ul>
         </section>
       </section>
+      <section>
+        <name>"Common Disposition Codes" Registry</name>
+        <t>
+          An agency assigns a disposition to an incident when its participation in the incident ends. The disposition code indicates whether follow-up reports are required and conveys other information about the incident, such as whether it resulted from a false or actual alarm. They are used to exchange the status and follow up requirements of an incident upon its closure. The disposition codes are drawn from a registry containing common disposition codes for Police, Fire EMS disciplines. These codes are defined by <xref target="APCO1.111" /> and implemented by <xref target ="EIDO" />. 
+        </t>
+        <t>
+          IANA is requested to create a registry enumerating these values. Because APCO ANS 1.111.2-2018 uses a two-digit integer as an incident status code, IANA is also requested to hold values 46-100 for future versions of the standard.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Name" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <name>"Report Number Type" Registry</name>
+        <t>
+          Used to indicate the current status of the report number associated with an incident. If a report number is present in an EIDO, it is required to indicate the current status of the report number (.e.g, "New" or "Ongoing"). IANA is requested to create a registry to enumerate allowable values for this field.
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            Specification required.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Name" (a short string)</li>
+            <li>A "Reference" (URI) to a document that requests the entry</li>
+          </ul>
+        </section>
+      </section>
+      
     </section>
     <section anchor="Security" numbered="true" toc="default">
       <name>Security Considerations</name>
@@ -1260,6 +1316,17 @@
               <organization abbrev="APCO">Association of Public Safety Communications Officials International</organization>
             </author>
             <date year="2019"/>
+          </front>
+        </reference>
+        <reference anchor="APCO1.111" target ="https://www.apcointl.org/download/apco_ans_1-111-2-2018-disposition-codes/">
+          <front>
+            <title>
+              APCO ANS 1.111.2-2018 Public Safety Communications Common Disposition Codes for Data Exchange
+            </title>
+            <author>
+              <organization abbrev="APCO">Association of Public Safety Communications Officials International</organization>
+            </author>
+            <date year="2018"/>
           </front>
         </reference>
         <reference anchor="NENAi3" target ="https://www.nena.org/page/i3_Stage3">
