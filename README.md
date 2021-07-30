@@ -4,3 +4,5 @@ Working file for developing an omnibus RFC to move and update registries from NE
 This is a work in progress and may contain errors and may never be published.
 
 Use XML2RFC to preview the document in human-readable form: https://xml2rfc.tools.ietf.org/ 
+
+Document editors will make a good-faith effort to periodically update the repo with a PDF export of the RFC XML.
