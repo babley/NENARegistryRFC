@@ -938,7 +938,7 @@
       <section>
         <name>"Status Codes" Registry</name>
         <t>
-          <xref target="NENAi3" /> uses normal HTTP status codes wherever possible (<xref target="RFC7231" /> and <xref target="StatusCodes" />. However, there are requirements to register custom status codes specific to NG9-1-1 operations that are not adequately covered by the standard ones; this is particularly the case with HTTP errors (4xx). IANA is requested to create this registry.
+          <xref target="NENAi3" /> uses normal HTTP status codes wherever possible (<xref target="RFC7231" /> and <xref target="StatusCodes" />). However, there are requirements to register custom status codes specific to NG9-1-1 operations that are not adequately covered by the standard ones; this is particularly the case with HTTP errors (4xx). IANA is requested to create this registry.
         </t>
         <section>
           <name>
