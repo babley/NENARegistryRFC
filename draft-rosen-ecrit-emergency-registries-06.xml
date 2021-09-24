@@ -1525,6 +1525,35 @@
           </ul>
         </section>
       </section>
+      <section>
+        <name>"eidoExtensionId" Registry</name>
+        <t>
+          xx
+        </t>
+        <section>
+          <name>
+            Information Needed to Create a New Value
+          </name>
+          <t>
+            First come, first served.
+          </t>
+        </section>
+        <section>
+          <name>
+            Content
+          </name>
+          <t>
+            This registry contains:
+          </t>
+          <ul>
+            <li>The UTF-8 "Owner" of the extension (either a person or an organization) (a short string)</li>
+            <li>A stable "Contact" (URI) to contact the Owner</li>
+            <li>The UTF-8 "ID" (a unique short string)</li>
+            <li>The UTF-8 "Literal Description" (a short string)</li>
+            <li>A "Reference" (URI) to extension schema</li>
+          </ul>
+        </section>
+      </section>
     </section>
     <section anchor="Security" numbered="true" toc="default">
       <name>Security Considerations</name>
