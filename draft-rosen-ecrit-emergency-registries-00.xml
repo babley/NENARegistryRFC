@@ -971,7 +971,7 @@ please see http://xml.resource.org/authoring/README.html. -->
         <section>
           <name>"Agent Roles" Registry</name>
           <t>
-            Agents are people or automata that are associated with an agency.  Agents have roles (e.g., "Dispatching", "Calltaking"). Agency types are enumerated in this registry.
+            Agents are people or automata that are associated with an agency.  Agents have roles (e.g., "Dispatching", "Call Taking"). Agency types are enumerated in this registry.
           </t>
           <section>
             <name>Name</name>
@@ -997,7 +997,32 @@ please see http://xml.resource.org/authoring/README.html. -->
             </ul>
           </section>
         </section>
-
+        <section>
+          <name>Initial Values</name>
+          <table anchor="table_ex">
+            <name>Initial Values</name>
+            <thead>
+              <tr>
+                <th align='center'>Name</th>
+                <th align='center'>Description</th>
+                <th align='center'>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="center">Responding</td>
+                <td align="center">The act of responding to a call for service, such as when dispatched by a Dispatching Agent as a police, fire, medical or rescue Agent.</td>
+                <td align="center">This document</td>
+              </tr>
+              <tr>
+                <td align="center">dropOuts</td>
+                <td align="center">There were significant number of missing media packets</td>
+                <td align="center">This document</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <!-- Initial Values -->
         <section>
           <name>"Status Codes" Registry</name>
           <t>Interfaces in the standards used by this registry use standard status codes where appropriate.  However there are many circumstances where a more specific error code is used within an ESInet.  This registry enumerates the codes.</t>
