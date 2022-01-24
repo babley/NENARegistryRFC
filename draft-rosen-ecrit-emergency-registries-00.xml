@@ -1672,6 +1672,41 @@ please see http://xml.resource.org/authoring/README.html. -->
       </section>
       <!--EIDO Registries -->
     </section>
+    
+    <section>
+        <name>NG9-1-1 Call Processing metrics Standard Registries</name>
+        <t>
+          Following are registries needed by the NG9-1-1 Call Processing Metrics Standard, <xref target="NG911CallProcessingMetrics" />.
+        </t>
+        <section>
+          <name>"AnnouncementTypes" Registry</name>
+          <t>Different types of announcements.</t>
+          <section>
+            <name>Name</name>
+            <t>AnnouncementTypes</t>
+          </section>
+          <section>
+            <name>Information Needed to Create a New Value</name>
+            <t>Value and description of the announcement type.</t>
+          </section>
+          <section>
+            <name>Registration policy</name>
+            <t>
+              Specification Required <xref target="RFC8126"/>, which requires expert review.  The expert should confirm that the the entry represents a new role.
+            </t>
+          </section>
+          <section>
+            <name>Content</name>
+            <t>This registry contains:</t>
+            <ul>
+              <li>The UTF-8 "Value" (a short string)</li>
+              <li>The UTF-8 "Literal Description" (a short string)</li>
+              <li>A "Reference" (URI) to a document that requests the entry</li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <!--NG9-1-1 Call Processing Metrics Registries -->        
     <!--IANA Considerations -->
     <section anchor="Security" numbered="true" toc="default">
       <name>Security Considerations</name>
