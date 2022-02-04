@@ -1511,27 +1511,7 @@ please see http://xml.resource.org/authoring/README.html. -->
               <li>A "Reference" (URI) to a document that requests the entry</li>
             </ul>
           </section>
-          <section>
-            <name>Initial Values</name>
-            <table anchor="table_1">
-              <name>Initial Values</name>
-              <thead>
-                <tr>
-                  <th align='center'>Name</th>
-                  <th align='center'>Description</th>
-                  <th align='center'>Reference</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td align="center">deviceLocation</td>
-                  <td align="center">Location associated to a device</td>
-                  <td align="center">This document</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <!-- Initial Values -->
+        </section>
         <section>
           <name>"EIDO-PrimaryUnitStatus-Common" Registry</name>
           <t>
