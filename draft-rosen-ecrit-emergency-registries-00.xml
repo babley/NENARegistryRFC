@@ -19,7 +19,7 @@ please see http://xml.resource.org/authoring/README.html. -->
         <seriesInfo name="Internet-Draft" value="draft-rosen-ecrit-emergency-registries" />
         <!-- add 'role="editor"' below for the editors if appropriate -->
         <!-- Another author who claims to be an editor -->
-        <author fullname="Brian Rosen" initials="B.R." surname="Rosen">
+        <author fullname="Brian Rosen" initials="B." surname="Rosen">
             <organization>Unaffiliated</organization>
             <address>
                 <postal>
@@ -34,7 +34,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                 <!-- uri and facsimile elements may also be added -->
             </address>
         </author>
-        <author fullname="Brandon Abley" initials="B.A." role="editor" surname="Abley">
+        <author fullname="Brandon Abley" initials="B." role="editor" surname="Abley">
             <organization>NENA</organization>
             <address>
                 <postal>
@@ -68,7 +68,7 @@ please see http://xml.resource.org/authoring/README.html. -->
         output. If you submit your draft to the RFC Editor, the
         keywords will be used for the search engine. -->
         <abstract>
-            <t>Multiple emergency services standards organizations are developing standards based on IETF emergency call standards and other IETF protocols.  There is a desire among these organizations to use common registries not tied to a particular country or national SDO, in the long term pursuit of a single worldwide standard. This document asks IANA to create a set of registries and provides processes for expanding the set and populating them.</t>
+            <t>Multiple emergency services standards organizations are developing standards based on IETF emergency call standards and other IETF protocols.  There is a desire among these organizations to use common registries not tied to a particular country or national Standards Development Organization (SDO), in the long term pursuit of a single worldwide standard. This document asks IANA to create a set of registries and provides processes for expanding the set and populating them.</t>
         </abstract>
     </front>
     <middle>
@@ -79,7 +79,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                 establishes a framework for carrying emergency calls over the Internet using the SIP (
                 
                 <xref target="RFC3261" />
-                ) protocol.  Various regional organizations are developing standards for how calls conforming to this framework are handled within the Emergency Services IP Networks (ESInets) established by local, regional or national authorities to handle such calls and deliver them to the appropriate Public Safety Answering Point (PSAP).  Many of these standards have needed registries of values used in the protocols and services the services define.  Prior to this document, such registries were managed by the regional SDOs themselves.  There is a desire among many of the regional emergency services SDOs to have a single world-wide standard for handling emergency calls and as part of that effort, a single set of registries managed by a neutral party.  This document requests IANA to establish a new registry area called "Emergency" and to create a set of registries within that area.  This document does not describe initial contents of the registries.  That will be accomplished by requests from the regional SDOs, including <xref target="NENAi3" format="default">The NENA i3 Standard</xref>.
+                ) protocol.  Various regional organizations are developing standards for how calls conforming to this framework are handled within the Emergency Services IP Networks (ESInets) established by local, regional or national authorities to handle such calls and deliver them to the appropriate Public Safety Answering Point (PSAP). Many of these standards have needed registries of values used in the protocols and services the services define.  Prior to this document, such registries were managed by the regional SDOs themselves.  There is a desire among many of the regional emergency services SDOs to have a single world-wide standard for handling emergency calls and as part of that effort, a single set of registries managed by a neutral party.  This document requests IANA to establish a new registry area called "Emergency" and to create a set of registries within that area.  This document does not describe initial contents of the registries, with some exceptions. The registries will be populated by requests from the regional SDOs, including <xref target="NENAi3" format="default">The NENA i3 Standard</xref>.
                 
             </t>
             <section anchor="requirements" numbered="true" toc="default">
@@ -97,7 +97,7 @@ please see http://xml.resource.org/authoring/README.html. -->
         </section>
         <section anchor="Acknowledgements" numbered="true" toc="default">
             <name>Acknowledgements</name>
-            <t>Thanks to the workgroups and committees at NENA: The 9-1-1 Association, especially the Core Services Agency Systems Committees, as well as ETSI and EENA for their contributions to unify international emergency calling standards.</t>
+            <t>Thanks to the workgroups and committees at NENA: The 9-1-1 Association, especially the Core Services and Agency Systems committees, as well as ETSI and EENA for their contributions to unify international emergency calling standards.</t>
         </section>
         <!-- Possibly a 'Contributors' section ... -->
         <section anchor="conventions" title="Conventions used in this document">
@@ -140,7 +140,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                     <t>Assignment of top level classes is by standards documents, both standards-track RFCs and standards documents in other SDOs.  See <xref target="urnEmergency"/>.  Assignments within top level classes are defined in the document that defines the class. Such documents MUST specify how uniqueness within the class is achieved.</t>
                 </section>
                 <section><name>Security and Privacy</name>
-                    <t>Each top level class, in its defining document MUST describe the security and privacy considerations of that class.  In general, there are no special security consierations for these identifiers.  Several top level classes are defined in this document.  In some circumstances, these identifiers may indicate what kind of agency is involved with a public safety incident, and some may identify a specific agency.  Encryption of the communications that contain the identifier in classes defined in this document is REQUIRED and MUST be TLS or an equally secure protocol.  </t>
+                    <t>Each top level class, in its defining document MUST describe the security and privacy considerations of that class.  In general, there are no special security considerations for these identifiers.  Several top level classes are defined in this document.  In some circumstances, these identifiers may indicate what kind of agency is involved with a public safety incident, and some may identify a specific agency.  Encryption of the communications that contain the identifier in classes defined in this document is REQUIRED and MUST be TLS or an equally secure protocol.  </t>
                 </section>
                 <section><name>Interoperability</name>
                     <t>Many of the identifiers in urn:emergency are similar in construction and use as identifiers originally defined in urn:nena.  Backwards compatibility with those identifiers MUST be specified in the documents that use them.  NENA STA-010.3-2021 is the primary document that has this backwards compatibility requirement, as it defined most of the identifiers in urn:nena.  There are no other interoperability issues.</t>
@@ -154,7 +154,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                 <t>These registries are required to implement <xref target="NENAi3">The NENA i3 Standard for Next-Generation 9-1-1</xref> as well as the <xref target="EIDO">NENA Standard for Emergency Incident Data Object</xref>. These standards, unless otherwise specified, will initially populate the registries created by this document. Some registries previously existed in <xref target="NRS" format="default">the NENA Registry System</xref>, but the intent of international SDOs is to maintain next-generation emergency calling registries under IANA in the future. <xref target="NRS" /> will be maintained only for backwards compatibility, and for registries required only for North America.</t>
             </section>
             <section><name>Emergency Call Additional Data Registry</name>
-                <t>IANA is requested to move the Emergency Call Additional Data registry and its sub-registries to the Emergency Area</t>
+                <t>IANA is requested to move the Emergency Call Additional Data registry and its sub-registries to the Emergency Area.</t>
             </section>
             <section anchor="urnEmergency"><name>"urn:emergency" registry</name>
                 <t>IANA is requested to create a registry for the emergency nid top level classes in the emergency area.</t>
@@ -165,7 +165,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                     <t>Name of the top level class, a short description and a reference to a document that defines it.</t>
                 </section>
                 <section><name>Registration policy</name>
-                    <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The specification MUST be from the IETF or a recognized standards organization that creates standards for emergency services.  The expert must confirm the requested class is appropriate for emergency services, if the registering organization is not the IETF, that it is an appropriate organization to define the class, that the purpose adequately describes the new class and the reference leads to a document that clearly describes the use of the class.  Also see <xref target="subreg"/></t>
+                    <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The specification MUST be from the IETF or a recognized standards organization that creates standards for emergency services.  The expert must confirm the requested class is appropriate for emergency services, if the registering organization is not the IETF, that it is an appropriate organization to define the class, that the purpose adequately describes the new class and the reference leads to a document that clearly describes the use of the class.  Also see <xref target="subreg"/>.</t>
                 </section>
                 <section><name>Content</name>
                     <t>This registry contains:</t>
@@ -1374,9 +1374,5 @@ please see http://xml.resource.org/authoring/README.html. -->
                 
             </references>
         </references>
-        <section anchor="app-additional" numbered="true" toc="default">
-            <name>Additional Stuff</name>
-            <t>This becomes an Appendix.</t>
-        </section>
     </back>
 </rfc>
