@@ -188,7 +188,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                             <t>Name of the entry, a short description and a reference to a document that defines it.</t>
                         </section>
                         <section><name>Registration policy</name>
-                            <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The specification MUST be from the IETF or a recognized standards organization that creates standards for emergency services.  The expert must confirm the requested entry is appropriate for emergency services, if the registering organization is not the IETF, that it is an appropriate organization to define the entry, that the purpose adequately describes the new entry and the reference leads to a document that clearly describes the use of the entry.  Also see <xref target="subreg"/></t>
+                            <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The specification MUST be from the IETF or a recognized standards organization that creates standards for emergency services.  The expert must confirm the requested entry is appropriate for emergency services, if the registering organization is not the IETF, that it is an appropriate organization to define the entry, that the purpose adequately describes the new entry and the reference leads to a document that clearly describes the use of the entry.  Also see <xref target="subreg"/>.</t>
                         </section>
                         <section><name>Content</name>
                             <t>This registry contains:</t>
@@ -201,7 +201,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                     </section>
                     <section><name>"urn:emergency:service:sos" Subregistry</name>
                         <t>IANA is requested to creates a subregistry for "urn:emergency:service:sos" under "urn:emergency:service".</t>
-                        <t>Routing of emergency calls within the ESInet is a primary function of systems that process such calls. When routing entities must route calls within the ESInet, they query the LoST Server for the route. Routing for emergency calls may involve multiple levels of routing entities. Each level may need a different URN to be distinguishable. Routing of emergency calls, including instant messages and non-interactive calls within an ESInet, is accomplished with a URN beginning with “urn:emergency:service:sos”.  The “urn:emergency:service:sos” registry contains values appropriate for the various levels of routing within the ESInet.  The separator between urn:emergency:service:sos and entry in the subregistry is a colon (":").</t>
+                        <t>Routing of emergency calls within the ESInet is a primary function of systems that process such calls. When routing entities must route calls within the ESInet, they query the LoST Server for the route. Routing for emergency calls may involve multiple levels of routing entities. Each level may need a different URN to be distinguishable. Routing of emergency calls, including instant messages and non-interactive calls within an ESInet, is accomplished with a URN beginning with “urn:emergency:service:sos”.  The “urn:emergency:service:sos” registry contains values appropriate for the various levels of routing within the ESInet.  The separator between urn:emergency:service:sos and an entry in the subregistry is a colon (":").</t>
                         <section><name>Name</name>
                             <t>urn:emergency:service:sos</t>
                         </section>
@@ -209,7 +209,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                             <t>Name of the entry, a short description and a reference to a document that defines it.</t>
                         </section>
                         <section><name>Registration policy</name>
-                            <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The specification MUST be from the IETF or a recognized standards organization that creates standards for emergency services.  The expert must confirm the requested class is appropriate for emergency services, if the registering organization is not the IETF, that it is an appropriate organization to define the class, that the purpose adequately describes the new class and the reference leads to a document that clearly describes the use of the class.  Also see <xref target="subreg"/></t>
+                            <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The specification MUST be from the IETF or a recognized standards organization that creates standards for emergency services.  The expert must confirm the requested class is appropriate for emergency services, if the registering organization is not the IETF, that it is an appropriate organization to define the class, that the purpose adequately describes the new class and the reference leads to a document that clearly describes the use of the class.  Also see <xref target="subreg"/>.</t>
                         </section>
                         <section><name>Content</name>
                             <t>This registry contains:</t>
@@ -269,7 +269,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                             <t>Name of the entry, a short description and a reference to a document that defines it.</t>
                         </section>
                         <section><name>Registration policy</name>
-                            <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The expert should confirm that entry represents a kind of police department, considered broadly.  The names used for various kinds of police departments varies from country to country.  The expert is requested to try to minimize the number of entries in the registry, but is not expected to have to learn the details of how police forces are organized in any country.  An English name is preferred, to match the existing entries</t>
+                            <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The expert should confirm that entry represents a kind of police department, considered broadly.  The names used for various kinds of police departments varies from country to country.  The expert is requested to try to minimize the number of entries in the registry, but is not expected to have to learn the details of how police forces are organized in any country.  An English name is preferred, to match the existing entries.</t>
                         </section>
                         <section><name>Content</name>
                             <t>This registry contains:</t>
@@ -288,7 +288,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                             <t>urn:emergency:service:responder.police.federal</t>
                         </section>
                         <section><name>Information Needed to Create a New Value</name>
-                            <t>Short and long forms of the entry and a reference to a document that defines it or a person that requested the enty.</t>
+                            <t>Short and long forms of the entry and a reference to a document that defines it or a person that requested the entry.</t>
                         </section>
                         <section><name>Registration policy</name>
                             <t>Expert Review. No standards document required.  The expert should confirm that entry represents a kind of federal police department, considered broadly.  As this is a specific agency, entries for different countries may be different.</t>
@@ -313,7 +313,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                             <t>Name of the entry, a short description and a reference to a document that specifies the entry.</t>
                         </section>
                         <section><name>Registration policy</name>
-                            <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The expert should confirm that entry represents a kind of fire department, considered broadly.  The names used for various kinds of fire departments varies from country to country.  The expert is requested to try to minimize the number of entries in the registry, but is not expected to have to learn the details of how fire departments are organized in any country.  An English name is preferred, to match the existing entries</t>
+                            <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The expert should confirm that entry represents a kind of fire department, considered broadly.  The names used for various kinds of fire departments varies from country to country.  The expert is requested to try to minimize the number of entries in the registry, but is not expected to have to learn the details of how fire departments are organized in any country.  An English name is preferred, to match the existing entries.</t>
                         </section>
                         <section><name>Content</name>
                             <t>This registry contains:</t>
@@ -335,7 +335,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                             <t>Name of the entry, a short description and a reference to a document that specifies the entry.</t>
                         </section>
                         <section><name>Registration policy</name>
-                            <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The expert should confirm that entry represents a kind of emergency medical service, considered broadly.  The names used for various kinds of emergency medical services varies from country to country.  The expert is requested to try to minimize the number of entries in the registry, but is not expected to have to learn the details of how emergency medical services are organized in any country.  An English name is preferred, to match the existing entries</t>
+                            <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The expert should confirm that entry represents a kind of emergency medical service, considered broadly.  The names used for various kinds of emergency medical services varies from country to country.  The expert is requested to try to minimize the number of entries in the registry, but is not expected to have to learn the details of how emergency medical services are organized in any country.  An English name is preferred, to match the existing entries.</t>
                         </section>
                         <section><name>Content</name>
                             <t>This registry contains:</t>
@@ -419,7 +419,7 @@ please see http://xml.resource.org/authoring/README.html. -->
             
             
             <section><name>Internal Services Registries</name>
-                <t>The following are additional registries used internally in an ESInet /></t>
+                <t>The following are additional registries used internally in an ESInet:</t>
                 <section><name>"serviceNames" Registry</name>
                     <t>Processing of emergency calls uses a variety of services which are queried either using SIP or HTTP. These services are discoverable through the ESInet that has deployed an instance of these services. In order to faciliate interoperability there is need to codify their names in a registry. IANA is requested creates the ServiceNames registry in the Emergency area.</t>
                     <section><name>Name</name>
@@ -490,7 +490,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                         <li>"SS" for a substring match</li>
                         <li>"IS" for a registry-defined match</li>
                     </ul>
-                    <t>The latter condition includes a value from this registry and tests the header with the criteria defined for the value</t>
+                    <t>The latter condition includes a value from this registry and tests the header with the criteria defined for the value.</t>
                     <section><name>Name</name>
                         <t>SIPHeaderIsOperatorConditions</t>
                     </section>
@@ -637,7 +637,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                 </section>
                 
                 <section><name>"LogEvent CallTypes" Registry</name>
-                    <t>The type of Call is logegd with the StartCall and EndCall LogEvents. The StartCall log event includes a "callType" parameter. These call types are enumerated in this registry.  The logEvent allows a call to have primary and secondary call types.  The registry denotes which call types may be primary call types and which may be secondary</t>
+                    <t>The type of Call is logegd with the StartCall and EndCall LogEvents. The StartCall log event includes a "callType" parameter. These call types are enumerated in this registry.  The logEvent allows a call to have primary and secondary call types.  The registry denotes which call types may be primary call types and which may be secondary.</t>
                     <section><name>Name</name>
                         <t>LogEvent CallType</t>
                     </section>
@@ -879,7 +879,7 @@ please see http://xml.resource.org/authoring/README.html. -->
                         <t>Discrepancy Report Status Token</t>
                     </section>
                     <section><name>Information Needed to Create a New Value</name>
-                        <t>Token, Member Name where token is used, Discrepancy Report where token is used</t>
+                        <t>Token, Member Name where token is used, Discrepancy Report where token is used.</t>
                     </section>
                     <section><name>Registration policy</name>
                         <t>Specification Required <xref target="RFC8126"/>, which requires expert review.  The expert should confirm that entry represents a new interface.</t>
