@@ -54,7 +54,7 @@
         <!-- uri and facsimile elements may also be added -->
       </address>
     </author>
-    <author fullname="Daniel Hagan" initials="D.H." surname="Hagan" role="editor">
+    <author fullname="Daniel Hagan" initials="D.H." surname="Hagan">
       <organization>Hagan Consulting Inc.</organization>
       <address>
         <postal>
@@ -200,8 +200,9 @@
           backwards compatibility, and for registries required only for North America. </t>
       </section>
       <section>
+        <!-- dhagan - move out of emergency group. -->
         <name>"emergency" URN namespace</name>
-        <t>IANA is requested to register a new URN namespace for "emergency".</t>
+        <t>IANA is requested to register a new URN namespace for "emergency" in the Formal URN Namepsaces registry.</t>
         <section>
           <name>Namespace Identifier</name>
           <t>emergency</t>
@@ -298,7 +299,7 @@
       <section>
         <name>Emergency Call Additional Data Registry</name>
         <t>IANA is requested to move the Emergency Call Additional Data registry and its
-          subregistries to the Emergency Registry.</t>
+          subregistries to the Emergency Group.</t>
       </section>
       <section anchor="urnEmergency">
         <name>"urn:emergency" Registry</name>
