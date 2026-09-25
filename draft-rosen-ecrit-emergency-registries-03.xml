@@ -155,14 +155,14 @@
       </section>
       <section anchor="PurposePrefix">
         <name>Emergency Purpose Parameter Value</name>
-        <t>This document defines the 'Emergency' prefix for the 'purpose' parameter of the
+        <t>This document defines the 'emergency' prefix for the 'purpose' parameter of the
           Call-Info header field <xref target="RFC3261" />. IANA is requested to add this
           document to the list of references for the 'purpose' value of Call-Info in the
-          "Header Field Parameters and Parameter Values" sub- registry of the "Session
-          Initiation Protocol (SIP) Parameters" registry. Note that 'Emergency' is a
+          "Header Field Parameters and Parameter Values" sub-registry of the "Session
+          Initiation Protocol (SIP) Parameters" registry. Note that 'emergency' is a
           compound value; when used as a value of the 'purpose' parameter of a Call-Info
-          header field, 'Emergency' is immediately followed by a hyphen ('-') and a value
-          from the Emergency Call-Info Purpose registry. </t>
+          header field, 'emergency' is immediately followed by a hyphen ('-') and a value
+          from the Emergency Call-Info Purpose registry. (<xref target="emergency_callinfo_purpose" />)</t>
       </section>
       <section>
         <!-- dhagan - move out of emergency group. -->
@@ -1787,7 +1787,7 @@
         <!-- LoggingServiceMediaReasonCodes-->
       </section>
       <!-- Internal Registries -->
-      <section>
+      <section anchor="emergency_callinfo_purpose">
         <name>Emergency Call-Info Purpose Registry</name>
         <t> Emergency calls use a number of Call-Info headers to provide information about
           the call to entities along the call path. The purpose parameter for all of these
@@ -1799,7 +1799,7 @@
         </section>
         <section>
           <name>Information Needed to Create a New Value</name>
-          <t>Name of the purpose</t>
+          <t>Name and description of the purpose</t>
         </section>
         <section>
           <name>Registration policy</name>
