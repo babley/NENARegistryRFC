@@ -138,11 +138,11 @@
         those registries.</t>
       <section>
         <name>SIP Reason Protocols</name>
-        <t> IANA is requested to add the value "emergency" to the SIP Protocols Registry (<xref
+        <t> IANA is requested to add the value "Emergency" to the SIP Parameters Reason Protocols Registry (<xref
             target="SIPProto" />). </t>
         <section>
           <name>Protocol Value</name>
-          <t>"emergency"</t>
+          <t>"Emergency"</t>
         </section>
         <section>
           <name>Protocol Cause</name>
@@ -2727,7 +2727,7 @@
           target="https://www.iana.org/assignments/sip-parameters/sip-parameters.xhtml#sip-parameters-3">
           <front>
             <title>
-              Session Initiation Protocol (SIP) Parameters, Reason Parameters
+              Session Initiation Protocol (SIP) Parameters, Reason Protocols
             </title>
             <author>
               <organization abbrev="IANA">Internet Assigned Numbers Authority</organization>
