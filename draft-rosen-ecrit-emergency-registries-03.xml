@@ -200,6 +200,11 @@
           backwards compatibility, and for registries required only for North America. </t>
       </section>
       <section>
+        <name>Emergency Call Additional Data Registry</name>
+        <t>IANA is requested to move the Emergency Call Additional Data registry and its
+          subregistries to the Emergency Group.</t>
+      </section>
+      <section>
         <!-- dhagan - move out of emergency group. -->
         <name>"emergency" URN namespace</name>
         <t>IANA is requested to register a new URN namespace for "emergency" in the Formal URN Namepsaces registry.</t>
@@ -295,11 +300,6 @@
           <name>Resolution</name>
           <t>No resolution of these identifiers is defined.</t>
         </section>
-      </section>
-      <section>
-        <name>Emergency Call Additional Data Registry</name>
-        <t>IANA is requested to move the Emergency Call Additional Data registry and its
-          subregistries to the Emergency Group.</t>
       </section>
       <section anchor="urnEmergency">
         <name>"urn:emergency" Registry</name>
