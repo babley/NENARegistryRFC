@@ -201,8 +201,8 @@
       </section>
       <section>
         <name>Emergency Call Additional Data Registry</name>
-        <t>IANA is requested to move the Emergency Call Additional Data registry and its
-          subregistries to the Emergency Group.</t>
+        <!-- dhagan - Need to discuss and ensure this is what we want. Do we want to rename them by prefixing 'Emergency Call Additional Data' to each registry name? -->
+        <t>IANA is requested to move the registries currently in the Emergency Call Additional Data group to the Emergency Group.</t>
       </section>
       <section>
         <!-- dhagan - move out of emergency group. -->
