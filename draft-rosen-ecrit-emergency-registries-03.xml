@@ -1754,7 +1754,7 @@
           <name>Emergency Call-Info Purpose Registry</name>
           <t> Emergency calls use a number of Call-Info headers to provide information about the
             call to entities along the call path. The purpose parameter for all of these consists of
-            the string "emergency", <xref target="PurposePrefix" /> followed by a hypen and a member
+            the string "emergency" (<xref target="PurposePrefix" />) followed by a hypen and a member
             of this registry. </t>
           <section>
             <name>Name</name>
