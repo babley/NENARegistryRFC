@@ -1732,7 +1732,7 @@
                 <tbody>
                   <tr>
                     <td align="center">lostConnection</td>
-                    <td align="center">The connection to the SRS was lost and could
+                    <td align="center">The connection to the Session Recording Server was lost and could
                       not be re-established</td>
                     <td align="center">This document</td>
                   </tr>
