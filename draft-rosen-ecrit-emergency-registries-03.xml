@@ -304,7 +304,7 @@
       <section anchor="urnEmergency">
         <name>"urn:emergency" Registry</name>
         <t>IANA is requested to create a registry for the emergency NID top level classes in
-          the Emergency Registry.</t>
+          the Emergency Group.</t>
         <section>
           <name>Name</name>
           <t>urn:emergency</t>
