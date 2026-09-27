@@ -1138,6 +1138,7 @@
           </section>
         </section>
         <section>
+          <!-- dhagan - this should probably include a URI to the schema of the event -->
           <name>"Log Event" Registry</name>
           <t>In emergency services, logging is used extensively. Some emergency services
             standards define the interface to the loging service and the format of the
