@@ -295,7 +295,6 @@
           international SDOs is to maintain next-generation emergency calling registries
           under IANA in the future. <xref target="NRS" /> will be maintained only for
           backwards compatibility, and for registries required only for North America. </t>
-      </section>
       <section>
         <name>Emergency Call Additional Data Registry</name>
         <!-- dhagan - Need to discuss and ensure this is what we want. Do we want to rename them by prefixing 'Emergency Call Additional Data' to each registry name? -->
@@ -2590,6 +2589,8 @@
             </ul>
           </section>
         </section>
+      </section>
+      </section>      
         <section>
           <name>External Registry Actions</name>
           <t>Sections 10.37 through 10.40 of <xref target="NENA-STA-010.3.1" /> request
@@ -2598,7 +2599,6 @@
             standard and are not duplicated in this omnibus Emergency-registry
             initialization section.</t>
         </section>
-      </section>
     </section>
     <!--IANA
         Considerations -->
