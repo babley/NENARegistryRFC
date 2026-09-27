@@ -1686,8 +1686,7 @@
           </section>
           <section>
             <name>"Logging Service Media Error Reason Codes" Registry</name>
-            <!-- dhagan: Source? Mentioned in STA-010.3f & 3.1 text, but not defined
-          anywhere. Add to 3.1 draft? -->
+            <!-- dhagan: Emailed i3 WG about adding this to STA-010.3.1 draft. If accepted, we can remove initial values from here and note from intro of RFC.  -->
             <t>
               When logging real time media in an ESInet, the recording mechanism may fail,
               and a log event, RecordingFailedLogEvent is defined to log that failure. The
